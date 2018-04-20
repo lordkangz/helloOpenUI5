@@ -3,10 +3,10 @@
    <head>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta charset="utf-8">
-      <title>Walkthrough</title>
+      <title>Walkthrough UI5</title>
       <script
          id="sap-ui-bootstrap"
-    	 src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+    	 src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
          data-sap-ui-theme="sap_belize"
          data-sap-ui-libs="sap.m"
          data-sap-ui-bindingSyntax="complex"
@@ -16,12 +16,17 @@
             "sap.ui.demo.walkthrough": "./"
          }' >
       </script>
+      
       <script>
          sap.ui.getCore().attachInit(function () {
-            new sap.ui.core.ComponentContainer({
-               name : "sap.ui.demo.walkthrough"
+         	new sap.m.Shell({
+            app : new sap.ui.core.ComponentContainer({
+               name : "sap.ui.demo.walkthrough",
+               settings : {
+                      id : "walkthrough"
+                  }
+            })
             }).placeAt("content");
-
          });
       </script>
    </head>
